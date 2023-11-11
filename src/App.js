@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ProductDetail from './components/ProductDetail';
+
+const productData = {
+  name: 'Kingston SSD 960GB',
+  description: 'Disco Sólido interno Kingston - Capacidad de 960 GB - Con tecnología 3D NAND - Tamaño de 2.5 pulgadas - Interfaz de conexión SATA III',
+  price: 48990,
+  sku: 'SA400S37',
+  quantity: 41,
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProductDetail product={productData} />
     </div>
   );
 }
